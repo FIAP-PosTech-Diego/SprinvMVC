@@ -1,7 +1,6 @@
 package br.com.fiap.locatech.locatech.repositories;
 
 import br.com.fiap.locatech.locatech.entities.Pessoa;
-import br.com.fiap.locatech.locatech.entities.Veiculo;
 import org.springframework.jdbc.core.simple.JdbcClient;
 import org.springframework.stereotype.Repository;
 

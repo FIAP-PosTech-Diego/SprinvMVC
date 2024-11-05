@@ -2,7 +2,6 @@ package br.com.fiap.locatech.locatech.services;
 
 import br.com.fiap.locatech.locatech.entities.Pessoa;
 import br.com.fiap.locatech.locatech.repositories.PessoaRepository;
-import br.com.fiap.locatech.locatech.repositories.PessoaRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
