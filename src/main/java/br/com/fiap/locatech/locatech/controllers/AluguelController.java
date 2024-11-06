@@ -1,5 +1,6 @@
 package br.com.fiap.locatech.locatech.controllers;
 
+import br.com.fiap.locatech.locatech.dtos.AluguelDTO;
 import br.com.fiap.locatech.locatech.entities.Aluguel;
 import br.com.fiap.locatech.locatech.services.AluguelService;
 import lombok.extern.slf4j.Slf4j;
@@ -30,17 +31,17 @@ public class AluguelController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Optional<Aluguel>> findAluguel(@PathVariable("id") Long id){
+    public ResponseEntity<Aluguel> findAluguel(@PathVariable("id") Long id){
         log.info("Retornando Aluguel");
-        Optional<Aluguel> Aluguel = aluguelService.findAluguelById(id);
+        Aluguel Aluguel = aluguelService.findAluguelById(id);
 
         return ResponseEntity.ok(Aluguel);
     }
 
     @PostMapping
-    public ResponseEntity<Void> saveAluguel(@RequestBody Aluguel Aluguel){
+    public ResponseEntity<Void> saveAluguel(@RequestBody AluguelDTO aluguel){
         log.info("salvando Aluguel");
-        aluguelService.saveAluguel(Aluguel);
+        aluguelService.saveAluguel(aluguel);
         return ResponseEntity.status(201).build();
     }
 

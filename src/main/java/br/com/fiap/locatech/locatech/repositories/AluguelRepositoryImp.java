@@ -22,7 +22,7 @@ public class AluguelRepositoryImp implements AluguelRepository{
         return this.jdbcClient
                 .sql("SELECT a.id, a.pessoa_id, a.veiculo_id, a.data_inicio, a.data_fim, a.valor_total, " +
                         "p.nome as pessoa_nome, p.cpf as pessoa_cpf, " +
-                        "v.modelo as veiculo_modeo, v.placa as veiculo_placa " +
+                        "v.modelo as veiculo_modelo, v.placa as veiculo_placa " +
                         "FROM alugueis a " +
                         "join pessoas p on a.pessoa_id = p.id " +
                         "join veiculos v on a.veiculo_id = v.id " +
@@ -37,7 +37,7 @@ public class AluguelRepositoryImp implements AluguelRepository{
         return this.jdbcClient
                 .sql("SELECT a.id, a.pessoa_id, a.veiculo_id, a.data_inicio, a.data_fim, a.valor_total, " +
                         "p.nome as pessoa_nome, p.cpf as pessoa_cpf, " +
-                        "v.modelo as veiculo_modeo, v.placa as veiculo_placa " +
+                        "v.modelo as veiculo_modelo, v.placa as veiculo_placa " +
                         "FROM alugueis a " +
                         "join pessoas p on a.pessoa_id = p.id " +
                         "join veiculos v on a.veiculo_id = v.id " +
